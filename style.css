@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+gamezone {
+	background-color: whitesnake;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 90vh;
+}
+
+input[type="reset"] {
+	animation: changeOrder 0.45s infinite linear;
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	font-size: 2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	user-select: none;
+}
+
+#tetris{
+	background-color: white;
+	box-shadow: 0 0 10px 0 lightgray;
+}
