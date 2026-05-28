@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">\
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tetris</title>
-	<link rel="stylesheet" href="./style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body onload="fullscreen();">	
-	<gamezone>		
-		<div><h2>Score: 0 </h2><!-- <input type="reset" value="🔄" /> --></div>
-		<canvas id="tetris"  class="elem" height="600" width="300"></canvas>
-	</gamezone>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Arcade</title>
+    <link rel="stylesheet" href="./style.css"> </head>
 
-	<!-- <button class="download">Download PDF</button> -->
-    <script>
-        /*let div = document.querySelector(".elem");
-        let btn = document.querySelector(".download");
-        btn.addEventListener('click', () => {
-            html2pdf().from(div).save()
-        })*/
-
-        console.log(15/3);
-        console.log(15%3);
-    </script>
+<body>
+    <div class="game-container">
+        <div class="game-wrapper">
+            <h1>TETRIS</h1>
+            <div class="top-bar">
+                <div id="score"> Score: 0 </div>
+                <div class="buttons">
+                    <button id="startBtn"> Start </button>
+                    <button id="pauseBtn"> Pause </button>
+                    <button id="restartBtn"> Restart </button>
+                </div>
+            </div>
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div id="gameOver"> GAME OVER </div>
+            <div class="footer"> Built with HTML5 Canvas + Vanilla JS </div>
+        </div>
+        <div class="side-panel">
+            <div class="card">
+                <h3>Controls</h3>
+                <div class="controls">
+                    <p>⬅️ Move Left</p>
+                    <p>➡️ Move Right</p>
+                    <p>⬇️ Soft Drop</p>
+                    <p>⬆️ Rotate</p>
+                    <p>SPACE Hard Drop</p>
+                    <p>ESC Pause</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Gameplay Tips</h3>
+                <p class="tips-text"> Clear multiple rows together for higher score multipliers. Speed increases as your score grows. </p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
+
 </html>
