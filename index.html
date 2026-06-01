@@ -1,47 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Arcade</title>
-    <link rel="stylesheet" href="./style.css"> </head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tetris</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-    <div class="game-container">
-        <div class="game-wrapper">
-            <h1>TETRIS</h1>
-            <div class="top-bar">
-                <div id="score"> Score: 0 </div>
-                <div class="buttons">
-                    <button id="startBtn"> Start </button>
-                    <button id="pauseBtn"> Pause </button>
-                    <button id="restartBtn"> Restart </button>
-                </div>
-            </div>
-            <canvas id="tetris" width="300" height="600"></canvas>
-            <div id="gameOver"> GAME OVER </div>
-            <div class="footer"> Built with HTML5 Canvas + Vanilla JS </div>
-        </div>
-        <div class="side-panel">
-            <div class="card">
-                <h3>Controls</h3>
-                <div class="controls">
-                    <p>⬅️ Move Left</p>
-                    <p>➡️ Move Right</p>
-                    <p>⬇️ Soft Drop</p>
-                    <p>⬆️ Rotate</p>
-                    <p>SPACE Hard Drop</p>
-                    <p>ESC Pause</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Gameplay Tips</h3>
-                <p class="tips-text"> Clear multiple rows together for higher score multipliers. Speed increases as your score grows. </p>
-            </div>
-        </div>
-    </div>
-    <script src="./script.js"></script>
+<div class="wrap">
+<h1>TETRIS</h1>
+<div class="game-area">
+<canvas id="board" width="300" height="600"></canvas>
+<div class="panel">
+<div>Score: <span id="score">0</span></div>
+<button id="start">Start / Restart</button>
+<p>← → Move<br>↑ Rotate<br>↓ Drop Faster</p>
+</div>
+</div>
+</div>
+<script src="js/tetris.js"></script>
 </body>
-
 </html>
